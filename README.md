@@ -1,5 +1,7 @@
 # ibe
 
+> **Disclaimer**: This entire codebase was AI-generated. It has **not** been audited and is intended for educational and research purposes only. **Do not use in production.**
+
 Boneh-Franklin **Identity-Based Encryption** (IBE) over the BN254 pairing curve, implemented in Rust.
 
 Based on the seminal paper:
