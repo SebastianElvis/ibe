@@ -1,0 +1,38 @@
+[package]
+name = "ibe-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+rand = "0.8"
+rand_chacha = "0.3"
+ark-serialize = "0.5"
+
+[dependencies.ibe]
+path = ".."
+
+[[bin]]
+name = "fuzz_basic_decrypt"
+path = "fuzz_targets/fuzz_basic_decrypt.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_full_decrypt"
+path = "fuzz_targets/fuzz_full_decrypt.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_deserialize"
+path = "fuzz_targets/fuzz_deserialize.rs"
+test = false
+doc = false
+bench = false
